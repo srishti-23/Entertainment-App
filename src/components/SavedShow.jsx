@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { AiOutlineClose } from 'react-icons/ai';
 import { removeMovie } from '../redux/savedMoviesSlice';
+import { PiTelevisionFill } from 'react-icons/pi';
 
-const SavedShows = () => {
+const SavedShow = () => {
   const dispatch = useDispatch();
   const savedMovies = useSelector((state) => state.savedMovies.savedMovies);
 
@@ -53,6 +54,22 @@ const SavedShows = () => {
                   <AiOutlineClose />
                 </p>
               </div>
+              <div className='flex items-center mt-2'>
+                <ul className='text-white flex gap-4 mr-4'>
+                  <li>{item?.title || item?.name}</li>
+                </ul>
+                {item.media_type === 'movie' ? (
+                  <div className='flex items-center'>
+                    <MdLocalMovies className='text-white ' />
+                    <span className='text-white'>Movie</span>
+                  </div>
+                ) : (
+                  <div className='flex items-center gap-2'>
+                    <PiTelevisionFill className='text-white' />
+                    <span className='text-white'>TV</span>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -66,4 +83,4 @@ const SavedShows = () => {
   );
 };
 
-export default SavedShows;
+export default SavedShow;

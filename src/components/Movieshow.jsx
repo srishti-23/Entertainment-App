@@ -152,7 +152,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdLocalMovies } from 'react-icons/md';
 import { PiTelevisionFill } from 'react-icons/pi';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { IoBookmarkOutline,IoBookmark  } from "react-icons/io5";
 import { addMovie, removeMovie } from '../redux/savedMoviesSlice';
 
 function Movie({ title, fetchURL }) {
@@ -210,9 +210,9 @@ function Movie({ title, fetchURL }) {
                 </p>
                 <p onClick={(e) => { e.stopPropagation(); saveMovie(item); }}>
                   {savedMovies.some((savedMovie) => savedMovie.id === item.id) ? (
-                    <FaHeart className='absolute top-4 left-4 text-gray-300' />
+                    <IoBookmark className='absolute top-4 left-4 text-gray-300' />
                   ) : (
-                    <FaRegHeart className='absolute top-4 left-4 text-gray-300' />
+                    <IoBookmarkOutline className='absolute top-4 left-4 text-gray-300' />
                   )}
                 </p>
               </div>

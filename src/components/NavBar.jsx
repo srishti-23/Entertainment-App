@@ -11,6 +11,7 @@ import axios from "axios";
 import { API_END_POINT } from '../utils/constant';
 import toast, { Toaster } from "react-hot-toast";
 
+
 const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="h-screen w-16 flex flex-col items-center justify-between bg-gray-900 py-4 rounded-t-lg rounded-b-lg">
+    <div className="h-screen relative z-1000 w-16 flex flex-col items-center justify-between bg-gray-900 py-4 rounded-t-lg rounded-b-lg">
       {/* Top Icons */}
       <div className="flex flex-col items-center space-y-6">
         <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-red-600">
