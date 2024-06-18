@@ -1,4 +1,4 @@
-export const API_END_POINT = "https://entertainment-app-5.onrender.com//api/v1/user";
+export const API_END_POINT = "https://entertainment-app-2-0.onrender.com/api/v1/user";
 
 export const options = {
     method: 'GET',
